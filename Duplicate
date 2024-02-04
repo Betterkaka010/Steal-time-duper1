@@ -1,0 +1,16 @@
+-- This function calculates the time in seconds that the FLAME-Steal-Time-Modded-Simulator
+-- gives to the local player.
+-- @param localPlayer: The name of the local player.
+-- @param zq_nk: The value of zq_nk in meters.
+-- @return: Returns the time in seconds that the simulator gives to the local player.
+function calculateTime(localPlayer, zq_nk)
+    -- Convert zq_nk from meters to seconds
+    local timeInSeconds = zq_nk / 1000000
+    return timeInSeconds
+end
+
+-- Example usage of the calculateTime function
+local localPlayer = "FLAME-Steal-Time-Modded-Simulator"
+local zq_nk = 60000000
+local timeInSeconds = calculateTime(localPlayer, zq_nk)
+print("FLAME-Steal-Time-Modded-Simulator gives", localPlayer, timeInSeconds, "Seconds")
